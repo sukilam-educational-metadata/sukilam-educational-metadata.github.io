@@ -2,8 +2,8 @@
 
 This is the main repository for Education Metadata
 
-- https://w3id.org/education-metadata/
+- https://w3id.org/sukilam-educational-metadata/
 
 ## Snorql
 
-- https://education-metadata.github.io/snorql/
+- https://sukilam-educational-metadata.github.io/snorql/
