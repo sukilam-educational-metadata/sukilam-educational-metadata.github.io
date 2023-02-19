@@ -1,0 +1,215 @@
+@charset "utf-8";
+
+/** basic styles */
+html[lang=ja] body,
+h1,
+h2,
+h3,
+h4 {
+	font-family: sans-serif;
+}
+body,
+html {
+	margin: 0; padding: 0;
+}
+#header,
+header {
+	margin: 0;
+	padding: 0.8em;
+}
+#footer,
+footer {
+	font-size: 60%;
+	margin: 0 1.8em 1em 0;
+	text-align: center;
+}
+h1 {
+	font-weight: normal;
+	font-size: 160%;
+	margin: 0;
+	text-align: center;
+}
+.subtitle {
+	text-align: center;
+	margin-top: 0;
+}
+h2 {
+	font-weight: normal;
+	font-size: 120%;
+	margin: 0;
+	padding: 0 0 0.2em 0;
+}
+form {
+	margin: 0;
+}
+textarea {
+	width: 100%;
+}
+#prefixestext {
+	color: #555;
+	margin: 0;
+	line-height: 1.17;
+	font-size: 97%; white-space: pre;
+}
+img {
+	border: none;
+}
+.section,
+section {
+	margin-top: 0.9em;
+	padding: 0.6em 0.9em;
+}
+.busy {
+	color: #888;
+}
+.link {
+	background: url(link.png) center right no-repeat;
+	padding-right: 13px;
+}
+.queryresults {
+	border-collapse: collapse;
+	margin-top: 0.3em;
+}
+.queryresults td,
+.queryresults th {
+	padding: 0.2em 0.4em;
+	vertical-align: top;
+	word-break: break-all;
+}
+/*.uri { white-space: nowrap; }*/
+.uri a,
+a.uri,
+a.qname {
+	text-decoration: none;
+}
+.unbound {
+	color: #888;
+}
+.queryresults a small {
+	font-size: 100%;
+	color: #55a;
+}
+.queryresults small {
+	font-size: 100%;
+	color: #666;
+}
+/*.queryresults .property { white-space: nowrap; }*/
+
+#rdficon {
+	float: right;
+	margin: 0.6em 1em;
+}
+.directory li {
+	margin-bottom: 0.5em;
+}
+.directory small {
+	font-size: 80%;
+	color: #666;
+}
+
+.snorql h1,
+.snorql h2 {
+	color: #400;
+}
+.snorql #header,
+.snorql header,
+.snorql .section,
+.snorql section {
+	background: #ccf;
+}
+/** query result table row/cell colors */
+.snorql .queryresults th {
+	background: #b9b9fd; /*#88c;*/
+}
+.snorql .queryresults th:nth-child(even) {
+	background: #bcbcfd; /*#88c;*/
+}
+.snorql .queryresults .odd td {
+	background: #f2f2ff; 
+}
+.snorql .queryresults .even td {
+	background: #eae9ff;
+} /*#ddddff */
+.snorql .queryresults .odd td:nth-child(even) {
+	background: #f4f3ff;
+}
+.snorql .queryresults .even td:nth-child(even) {
+	background: #ecebff;
+} /*#dfdeff*/
+
+/* unused browser class selectors deleted */
+
+/** node type style 2019-04-29 **/
+td span.literal:before {
+	content: '"'; color: #b3b3b3;
+}
+td span.literal:after {
+	content: '"';
+	color: #b3b3b3;
+}
+td a.uri:before {
+	content: '<'; color: #b3b3b3;
+}
+td a.uri:after {
+	content: '>';
+	color: #b3b3b3;
+}
+td span.literal[data-lang]:after {
+	content: '"@' attr(data-lang); color: #b3b3b3;
+}
+td span.literal[data-dtype]:after {
+	content: '"^^' attr(data-dtype);
+	color: #b3b3b3;
+}
+td span.literal[data-lang=ja-x-mt]:after {
+	content: '"@' attr(data-lang) ' (機械翻訳)';
+}
+td span.literal[data-lang=en-x-mt]:after,
+html[lang=en] td span.literal[data-lang=ja-x-mt]:after {
+	content: '"@' attr(data-lang) ' (M/C trans.)';
+}
+/** link anchors */
+a.extlink {
+	margin-left: 0.2em;
+}
+uri a:hover,
+a.uri:hover,
+a.qname:hover,
+td a[href].prop:hover,
+.queryresults a[href^="?query="] {
+	text-decoration: underline;
+	text-decoration-color: rgba(80, 80, 255, 0.33);
+	cursor: pointer;
+}
+/** z-indexes */
+#ressection img.primimage {
+	z-index: 10;
+}
+.map .leaflet-pane {
+	z-index: 2;
+}
+.map .leaflet-top,
+.map .leaflet-bottom {
+	z-index: 5;
+}
+td a.prop {
+	color: #0000ac;
+	cursor: default;
+}
+td a.prop:hover {
+	color: #2c2cff;
+	text-decoration: none;
+}
+code,
+textarea,
+pre,
+section div.CodeMirror {
+	font-size: 1rem;
+	line-height: 1.2;
+}
+#ressection.intro {
+	background: rgba(242, 242, 254, 0.6);
+}
+#ressection.intro p {
+	max-width: 1000px;
+}
