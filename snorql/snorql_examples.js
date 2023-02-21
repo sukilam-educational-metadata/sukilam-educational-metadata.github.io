@@ -31,7 +31,7 @@ LIMIT 100
 		"mlabel": ["学習指導要領LODとの統合クエリ", "test"],
 		"query": 
 `select ?s ?cos ?desc where {
-	?s <http://example.org/property/指導要領コード> ?cos . 
+	?s <https://w3id.org/sukilam-educational-metadata/term/property#指導要領コード> ?cos . 
 	SERVICE SILENT <https://dydra.com/ut-digital-archives/jp-cos/sparql> {
 		?cos schema:description ?desc . 
 	}
@@ -43,7 +43,7 @@ LIMIT 100
 		"mlabel": ["教材一覧", "test"],
 		"query" : 
 `select * where {
-	?s a <http://example.org/教育メタデータ>
+	?s a <https://w3id.org/sukilam-educational-metadata/data/教育メタデータ>
 }`,
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
 	},
@@ -61,7 +61,7 @@ LIMIT 100
 		"mlabel": ["キーワード「富士山」を含む教育メタデータ", "test"],
 		"query" : 
 `SELECT DISTINCT ?s ?label ?p ?p2 ?keyword WHERE {
-    bind(<http://example.org/キーワード/富士山> as ?keyword)
+    bind(<https://w3id.org/sukilam-educational-metadata/キーワード/富士山> as ?keyword)
 	{?s ?p ?keyword  FILTER(isIRI(?s))} UNION
 	{?s ?p ?o . ?o ?p2 ?keyword FILTER(isBLANK(?o))
 		MINUS {?s ?p3 ?keyword}
@@ -74,7 +74,7 @@ LIMIT 100
 		"mlabel": ["元資料の一覧", "test"],
 		"query" : 
 `select * where {
-	?s a  <http://example.org/元資料>;
+	?s a  <https://w3id.org/sukilam-educational-metadata/元資料>;
     	rdfs:label ?label;
        schema:image ?image
 }`,

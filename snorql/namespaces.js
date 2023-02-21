@@ -17,5 +17,7 @@ var D2R_namespacePrefixes = {
     rdf: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#',
     rdfs: 'http://www.w3.org/2000/01/rdf-schema#',
     owl: 'http://www.w3.org/2002/07/owl#',
+    "semp": "https://w3id.org/sukilam-educational-metadata/term/property#",
+    "sem": "https://w3id.org/sukilam-educational-metadata/"
 };
 
