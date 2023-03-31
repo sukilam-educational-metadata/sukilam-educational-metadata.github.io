@@ -30,7 +30,7 @@
 
 ## RDFデータ
 
-- [https://github.com/sukilam-educational-metadata/sukilam-educational-metadata.github.io/blob/main/data.ttl](https://github.com/sukilam-educational-metadata/sukilam-educational-metadata.github.io/blob/main/data.ttl)
+- [https://github.com/sukilam-educational-metadata/sukilam-educational-metadata.github.io/blob/main/dataset](https://github.com/sukilam-educational-metadata/sukilam-educational-metadata.github.io/blob/main/dataset)
 
 <br/>
 
