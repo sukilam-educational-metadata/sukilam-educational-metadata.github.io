@@ -71,13 +71,87 @@ LIMIT 100
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
 	},
 	{
+		"mlabel": ["キーワード「防災」を含む教育メタデータ", "test"],
+		"query" : 
+`SELECT DISTINCT ?s ?label ?p ?p2 ?keyword WHERE {
+    bind(<https://w3id.org/sukilam-educational-metadata/キーワード/防災> as ?keyword)
+	{?s ?p ?keyword  FILTER(isIRI(?s))} UNION
+	{?s ?p ?o . ?o ?p2 ?keyword FILTER(isBLANK(?o))
+		MINUS {?s ?p3 ?keyword}
+	}
+	OPTIONAL {?s rdfs:label ?label}
+} LIMIT 500`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
+	{
+		"mlabel": ["キーワード「徳川家康」を含む教育メタデータ", "test"],
+		"query" : 
+`SELECT DISTINCT ?s ?label ?p ?p2 ?keyword WHERE {
+    bind(<https://w3id.org/sukilam-educational-metadata/キーワード/徳川家康> as ?keyword)
+	{?s ?p ?keyword  FILTER(isIRI(?s))} UNION
+	{?s ?p ?o . ?o ?p2 ?keyword FILTER(isBLANK(?o))
+		MINUS {?s ?p3 ?keyword}
+	}
+	OPTIONAL {?s rdfs:label ?label}
+} LIMIT 500`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
+	{
+		"mlabel": ["キーワード「第二次世界大戦」を含む教育メタデータ", "test"],
+		"query" : 
+`SELECT DISTINCT ?s ?label ?p ?p2 ?keyword WHERE {
+    bind(<https://w3id.org/sukilam-educational-metadata/キーワード/第二次世界大戦> as ?keyword)
+	{?s ?p ?keyword  FILTER(isIRI(?s))} UNION
+	{?s ?p ?o . ?o ?p2 ?keyword FILTER(isBLANK(?o))
+		MINUS {?s ?p3 ?keyword}
+	}
+	OPTIONAL {?s rdfs:label ?label}
+} LIMIT 500`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
+	{
 		"mlabel": ["元資料の一覧", "test"],
 		"query" : 
 `select * where {
 	?s a  <https://w3id.org/sukilam-educational-metadata/元資料>;
     	rdfs:label ?label;
-       schema:image ?image
+       schema:image ?image;
+	   schema:url ?url
 }`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
+	{
+		"mlabel": ["小学６年生を対象にした教育メタデータ", "test"],
+		"query" : 
+`SELECT DISTINCT ?s ?label WHERE {
+	?s semp:学年 <https://w3id.org/sukilam-educational-metadata/学年/小6>;
+       rdfs:label ?label . 
+}
+LIMIT 100`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
+	{
+		"mlabel": ["東京都に関連する教育メタデータ", "test"],
+		"query" : 
+`SELECT DISTINCT ?s ?label WHERE {
+	?s semp:地理情報_都道府県 <https://w3id.org/sukilam-educational-metadata/地理情報_都道府県/東京>;
+       rdfs:label ?label . 
+}
+LIMIT 100`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
+	{
+		"mlabel": ["ジャパンサーチの資料を使った教育メタデータ", "test"],
+		"query" : 
+`select distinct ?e ?label ?source_label ?url ?image where {
+	?top semp:元資料メタデータ/semp:元資料 ?s . 
+	?s a  <https://w3id.org/sukilam-educational-metadata/元資料>;
+		  rdfs:label ?source_label;
+		  schema:image ?image;
+		  schema:url ?url . 
+		  filter (regex(str(?url), "jpsearch.go.jp"))  . 
+	?top semp:教育メタデータ ?e . ?e rdfs:label ?label . 
+  }`,
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
 	},
 	/*
