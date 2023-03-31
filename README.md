@@ -28,6 +28,12 @@
 
 <br/>
 
+## RDFデータ
+
+- [https://github.com/sukilam-educational-metadata/sukilam-educational-metadata.github.io/blob/main/data.ttl](https://github.com/sukilam-educational-metadata/sukilam-educational-metadata.github.io/blob/main/data.ttl)
+
+<br/>
+
 ## 作成者
 
 - 大井将生 (東京大学)
