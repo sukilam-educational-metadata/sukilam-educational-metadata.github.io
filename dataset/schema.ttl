@@ -5,9 +5,27 @@
     rdfs:label "元資料" ;
     rdfs:comment "元資料" .
 
+<https://w3id.org/sukilam-educational-metadata/元資料メタデータ> a rdfs:Class ;
+    rdfs:label "元資料メタデータ" ;
+    rdfs:comment "元資料メタデータ" .
+
+<https://w3id.org/sukilam-educational-metadata/教材メタデータ> a rdfs:Class ;
+    rdfs:label "教材メタデータ" ;
+    rdfs:comment "教材メタデータ" .
+
+<https://w3id.org/sukilam-educational-metadata/教育メタデータ> a rdfs:Class ;
+    rdfs:label "教育メタデータ" ;
+    rdfs:comment "教育メタデータ" .
+
 <https://w3id.org/sukilam-educational-metadata/term/property#元の資料の出典> a rdf:Property ;
     rdfs:label "元の資料の出典" ;
     rdfs:comment "元の資料の出典" ;
     rdfs:domain <https://w3id.org/sukilam-educational-metadata/元資料> ;
     rdfs:range rdfs:Literal .
+
+<https://w3id.org/sukilam-educational-metadata/term/property#指導要領コード> a rdf:Property ;
+    rdfs:label "指導要領コード" ;
+    rdfs:comment "指導要領コード" ;
+    rdfs:domain <https://w3id.org/sukilam-educational-metadata/教育メタデータ> ;
+    rdfs:range <https://w3id.org/jp-cos/Item> .
 
