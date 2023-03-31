@@ -143,13 +143,28 @@ LIMIT 100`,
 	{
 		"mlabel": ["ジャパンサーチの資料を使った教育メタデータ", "test"],
 		"query" : 
-`select distinct ?e ?label ?source_label ?url ?image where {
-	?top semp:元資料メタデータ/semp:元資料 ?s . 
-	?s a  <https://w3id.org/sukilam-educational-metadata/元資料>;
-		  rdfs:label ?source_label;
+`select distinct ?e ?label ?src ?src_label ?url ?image where {
+	?top semp:元資料メタデータ/semp:元資料 ?src . 
+	?src a  <https://w3id.org/sukilam-educational-metadata/元資料>;
+		  rdfs:label ?src_label;
 		  schema:image ?image;
 		  schema:url ?url . 
 		  filter (regex(str(?url), "jpsearch.go.jp"))  . 
+	?top semp:教育メタデータ ?e . ?e rdfs:label ?label . 
+  }`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
+	{
+		"mlabel": ["NHKアーカイブスの資料を使った教育メタデータ", "test"],
+		"query" : 
+`select distinct ?e ?label ?src ?src_label ?url ?image where {
+	?top semp:元資料メタデータ/semp:元資料 ?src . 
+	?src a  <https://w3id.org/sukilam-educational-metadata/元資料>;
+		  rdfs:label ?src_label;
+		  schema:image ?image;
+		  schema:url ?url;
+		  semp:元の資料の出典 ?ref . 
+		  filter (regex(?ref, "NHKアーカイブス"))  . 
 	?top semp:教育メタデータ ?e . ?e rdfs:label ?label . 
   }`,
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
