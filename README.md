@@ -22,7 +22,7 @@
 
 ## SPARQLエンドポイント（Snorql）
 
-- https://sukilam-educational-metadata.github.io/snorql/
+- [https://sukilam-educational-metadata.github.io/snorql/](https://sukilam-educational-metadata.github.io/snorql/)
 
 <!-- ## 連絡先 -->
 
