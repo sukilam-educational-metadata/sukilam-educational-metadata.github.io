@@ -97,6 +97,7 @@ var Snorqldef = {
 		//<ul> list items to provide additional information. set null or just delete if no <ul> list is needed
 		//基本紹介に続けて表示する<ul>用の多言語ラベル配列の配列。不要ならnullとする。※当初は第1アイテムは組み込みにしていましたが、より柔軟な設定ができるよう、リストすべてをここでの定義に移しました。
 		intro: [
+			["「学習指導要領LODとの統合クエリ」などにおいて、<a href=\"https://jp-cos.github.io/\">学習指導要領LOD</a>の成果を使用しています。"]
 			// ["入力欄下もしくは右にクエリ例があります。<a href=\"https://jpsearch.go.jp/api/sparql-explain/\">ジャパンサーチSPARQLエンドポイント解説</a>も参照してください。", "Query examples are provided below (or right-hand side of) the text area. See also <a href=\"https://www.kanzaki.com/works/ld/jpsearch/primer/\">Japan Search RDF Model Primer</a> for the general description."],
 			// ["エンドポイントの利用方法は<a href=\"https://jpsearch.go.jp/api/sparql-explain/\">SPARQLエンドポイント解説</a>をご覧ください。", "See <a href=\"https://www.kanzaki.com/works/ld/jpsearch/primer/\">Japan Search RDF Model Primer</a> for the general description of this endpoint."],
 			// ["用いているRDFモデルの概要は<a href=\"https://jpsearch.go.jp/api/introduction/\">利活用スキーマ概説</a>をご覧ください。", "See <a href=\"https://jpsearch.go.jp/api/introduction/\">Introduction to Japan Search SPARQL Endpoint</a> (in Japanese) for the RDF model."],
