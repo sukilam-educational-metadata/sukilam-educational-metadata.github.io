@@ -1,31 +1,201 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix data: <https://w3id.org/sukilam-educational-metadata/data/> .
+@prefix ex: <https://w3id.org/sukilam-educational-metadata/> .
+@prefix exp: <https://w3id.org/sukilam-educational-metadata/term/property#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix type: <https://jpsearch.go.jp/term/type/> .
 
-<https://w3id.org/sukilam-educational-metadata/元資料> a rdfs:Class ;
-    rdfs:label "元資料" ;
-    rdfs:comment "元資料" .
+type:キーワード a rdfs:Class ;
+    rdfs:label "キーワード"@ja ;
+    rdfs:comment "キーワードのクラス"@ja .
 
-<https://w3id.org/sukilam-educational-metadata/元資料メタデータ> a rdfs:Class ;
-    rdfs:label "元資料メタデータ" ;
-    rdfs:comment "元資料メタデータ" .
+type:単元 a rdfs:Class ;
+    rdfs:label "単元"@ja ;
+    rdfs:comment "単元のクラス"@ja .
 
-<https://w3id.org/sukilam-educational-metadata/教材メタデータ> a rdfs:Class ;
-    rdfs:label "教材メタデータ" ;
-    rdfs:comment "教材メタデータ" .
+type:問いの種類 a rdfs:Class ;
+    rdfs:label "問いの種類"@ja ;
+    rdfs:comment "問いの種類のクラス"@ja .
 
-<https://w3id.org/sukilam-educational-metadata/教育メタデータ> a rdfs:Class ;
-    rdfs:label "教育メタデータ" ;
-    rdfs:comment "教育メタデータ" .
+type:地理情報_その他地名 a rdfs:Class ;
+    rdfs:label "地理情報_その他地名"@ja ;
+    rdfs:comment "地理情報_その他地名のクラス"@ja .
 
-<https://w3id.org/sukilam-educational-metadata/term/property#元の資料の出典> a rdf:Property ;
-    rdfs:label "元の資料の出典" ;
-    rdfs:comment "元の資料の出典" ;
-    rdfs:domain <https://w3id.org/sukilam-educational-metadata/元資料> ;
-    rdfs:range rdfs:Literal .
+type:地理情報_外国 a rdfs:Class ;
+    rdfs:label "地理情報_外国"@ja ;
+    rdfs:comment "地理情報_外国のクラス"@ja .
 
-<https://w3id.org/sukilam-educational-metadata/term/property#指導要領コード> a rdf:Property ;
-    rdfs:label "指導要領コード" ;
-    rdfs:comment "指導要領コード" ;
-    rdfs:domain <https://w3id.org/sukilam-educational-metadata/教育メタデータ> ;
-    rdfs:range <https://w3id.org/jp-cos/Item> .
+type:地理情報_都道府県 a rdfs:Class ;
+    rdfs:label "地理情報_都道府県"@ja ;
+    rdfs:comment "地理情報_都道府県のクラス"@ja .
+
+type:学年 a rdfs:Class ;
+    rdfs:label "学年"@ja ;
+    rdfs:comment "学年のクラス"@ja .
+
+type:指導要領の評価観点 a rdfs:Class ;
+    rdfs:label "指導要領の評価観点"@ja ;
+    rdfs:comment "指導要領の評価観点のクラス"@ja .
+
+type:授業場面 a rdfs:Class ;
+    rdfs:label "授業場面"@ja ;
+    rdfs:comment "授業場面のクラス"@ja .
+
+type:文化名 a rdfs:Class ;
+    rdfs:label "文化名"@ja ;
+    rdfs:comment "文化名のクラス"@ja .
+
+type:時代 a rdfs:Class ;
+    rdfs:label "時代"@ja ;
+    rdfs:comment "時代のクラス"@ja .
+
+type:育みたいコンピテンシー a rdfs:Class ;
+    rdfs:label "育みたいコンピテンシー"@ja ;
+    rdfs:comment "育みたいコンピテンシーのクラス"@ja .
+
+type:視点 a rdfs:Class ;
+    rdfs:label "視点"@ja ;
+    rdfs:comment "視点のクラス"@ja .
+
+data:教育メタデータ a rdfs:Class ;
+    rdfs:label "教育メタデータ"@ja ;
+    rdfs:comment "教育メタデータのクラス"@ja .
+
+ex:元資料 a rdfs:Class ;
+    rdfs:label "Source Material"@en,
+        "元資料"@ja ;
+    rdfs:comment "Source Material Class"@en,
+        "元資料のクラス"@ja .
+
+ex:元資料メタデータ a rdfs:Class ;
+    rdfs:label "Source Material Metadata"@en,
+        "元資料メタデータ"@ja ;
+    rdfs:comment "Source Material Metadata Class"@en,
+        "元資料メタデータのクラス"@ja .
+
+exp:キーワード a rdfs:Property ;
+    rdfs:label "キーワード"@ja ;
+    rdfs:comment "キーワードのプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:キーワード .
+
+exp:元の資料の出典 a rdfs:Property ;
+    rdfs:label "元の資料の出典"@ja ;
+    rdfs:comment "元の資料の出典のプロパティ"@ja ;
+    rdfs:domain exp:元資料メタデータ .
+
+exp:単元 a rdfs:Property ;
+    rdfs:label "単元"@ja ;
+    rdfs:comment "単元のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:単元 .
+
+exp:問いの種類 a rdfs:Property ;
+    rdfs:label "問いの種類"@ja ;
+    rdfs:comment "問いの種類のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:問いの種類 .
+
+exp:地理情報_その他地名 a rdfs:Property ;
+    rdfs:label "地理情報_その他地名"@ja ;
+    rdfs:comment "地理情報_その他地名のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:地理情報_その他地名 .
+
+exp:地理情報_都道府県 a rdfs:Property ;
+    rdfs:label "地理情報_外国"@ja,
+        "地理情報_都道府県"@ja ;
+    rdfs:comment "地理情報_外国のプロパティ"@ja,
+        "地理情報_都道府県のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:地理情報_外国,
+        type:地理情報_都道府県 .
+
+exp:学年 a rdfs:Property ;
+    rdfs:label "学年"@ja ;
+    rdfs:comment "学年のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:学年 .
+
+exp:学習の目的 a rdfs:Property ;
+    rdfs:label "学習の目的"@ja ;
+    rdfs:comment "学習の目的のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ .
+
+exp:学習指導案 a rdfs:Property ;
+    rdfs:label "学習指導案"@ja ;
+    rdfs:comment "学習指導案のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ .
+
+exp:指導要領の評価観点 a rdfs:Property ;
+    rdfs:label "指導要領の評価観点"@ja ;
+    rdfs:comment "指導要領の評価観点のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:指導要領の評価観点 .
+
+exp:指導要領コード a rdfs:Property ;
+    rdfs:label "指導要領コード"@ja ;
+    rdfs:comment "指導要領コードのプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ .
+
+exp:授業場面 a rdfs:Property ;
+    rdfs:label "授業場面"@ja ;
+    rdfs:comment "授業場面のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:授業場面 .
+
+exp:教材製作者 a rdfs:Property ;
+    rdfs:label "教材製作者"@ja ;
+    rdfs:comment "教材製作者のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ .
+
+exp:教科 a rdfs:Property ;
+    rdfs:label "教科"@ja ;
+    rdfs:comment "教科のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ .
+
+exp:教育メタデータ a rdfs:Property ;
+    rdfs:label "教育メタデータ"@ja ;
+    rdfs:comment "教育メタデータのプロパティ"@ja ;
+    rdfs:domain data:教材メタデータ ;
+    rdfs:range data:教育メタデータ .
+
+exp:文化名 a rdfs:Property ;
+    rdfs:label "文化名"@ja ;
+    rdfs:comment "文化名のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:文化名 .
+
+exp:時代 a rdfs:Property ;
+    rdfs:label "時代"@ja ;
+    rdfs:comment "時代のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:時代 .
+
+exp:発問 a rdfs:Property ;
+    rdfs:label "発問"@ja ;
+    rdfs:comment "発問のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ .
+
+exp:育みたいコンピテンシー a rdfs:Property ;
+    rdfs:label "育みたいコンピテンシー"@ja ;
+    rdfs:comment "育みたいコンピテンシーのプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:育みたいコンピテンシー .
+
+exp:視点 a rdfs:Property ;
+    rdfs:label "視点"@ja ;
+    rdfs:comment "視点のプロパティ"@ja ;
+    rdfs:domain data:教育メタデータ ;
+    rdfs:range type:視点 .
+
+exp:資料番号 a rdfs:Property ;
+    rdfs:label "資料番号"@ja ;
+    rdfs:comment "資料番号のプロパティ"@ja ;
+    rdfs:domain exp:元資料メタデータ .
+
+exp:元資料メタデータ a rdfs:Property ;
+    rdfs:label "元資料メタデータ"@ja ;
+    rdfs:comment "元資料メタデータのプロパティ"@ja ;
+    rdfs:domain data:教材メタデータ ;
+    rdfs:range ex:元資料メタデータ .
 

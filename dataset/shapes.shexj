@@ -1,0 +1,1820 @@
+{
+  "type": "Schema",
+  "shapes": [
+    {
+      "id": "http://weso.es/shapes/Class",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "http://www.w3.org/2000/01/rdf-schema#Class"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+              },
+              "min": 1,
+              "max": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/教材メタデータ",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://w3id.org/sukilam-educational-metadata/data/教材メタデータ"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#元資料メタデータ",
+              "valueExpr": "http://weso.es/shapes/元資料メタデータ"
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#教育メタデータ",
+              "valueExpr": "http://weso.es/shapes/教育メタデータ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/Property",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "http://www.w3.org/2000/01/rdf-schema#Property"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#comment",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/1999/02/22-rdf-syntax-ns#langString"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#domain",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#range",
+              "valueExpr": "http://weso.es/shapes/Class",
+              "min": 0,
+              "max": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/Agent",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Agent"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2002/07/owl#sameAs",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/name",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/description",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Person"
+                ]
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/deathDate",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/birthDate",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/image",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/subjectOf",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/url",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/memberOf",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/Person",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Agent"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Person"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2002/07/owl#sameAs",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/name",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/description",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/deathDate",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/birthDate",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/image",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/subjectOf",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/url",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/memberOf",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/Keyword",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Keyword"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/name",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/Country",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Place"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Country"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 4,
+              "max": 4
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/name",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/geoCoveredBy",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/geo",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/isPartOf",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/Place",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Place"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/name",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/geoCoveredBy",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/geo",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/isPartOf",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/url",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Country"
+                ]
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/Time",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Time"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/CalendarEra",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Time"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/CalendarEra"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2002/07/owl#sameAs",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/name",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/HistoricalEra"
+                ]
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2004/02/skos/core#closeMatch",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://jpsearch.go.jp/term/property#start",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://jpsearch.go.jp/term/property#startEntity",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/startDate",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/endDate",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://jpsearch.go.jp/term/property#endEntity",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://jpsearch.go.jp/term/property#end",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/HistoricalEra",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Time"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/CalendarEra"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/HistoricalEra"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2002/07/owl#sameAs",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/name",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#isDefinedBy",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2004/02/skos/core#closeMatch",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://jpsearch.go.jp/term/property#start",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://jpsearch.go.jp/term/property#startEntity",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/startDate",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/名所絵",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Keyword"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "http://ja.dbpedia.org/resource/名所絵"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "http://www.wikidata.org/entity/Q3304751"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/Q3304751",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/Keyword"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "http://ja.dbpedia.org/resource/名所絵"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "http://www.wikidata.org/entity/Q3304751"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/元資料",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://w3id.org/sukilam-educational-metadata/元資料"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#資料番号",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/url",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#元の資料の出典",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/image",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/license",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/元資料メタデータ",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://w3id.org/sukilam-educational-metadata/data/元資料メタデータ"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#元資料",
+              "valueExpr": "http://weso.es/shapes/元資料",
+              "min": 0,
+              "max": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/教育メタデータ",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#指導要領コード",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://w3id.org/sukilam-educational-metadata/data/教育メタデータ"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://schema.org/geo",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#学年",
+              "valueExpr": "http://weso.es/shapes/学年",
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#教科",
+              "valueExpr": "http://weso.es/shapes/教科",
+              "min": 1,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#学習指導案",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#時代",
+              "valueExpr": "http://weso.es/shapes/時代",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#視点",
+              "valueExpr": "http://weso.es/shapes/視点",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#キーワード",
+              "valueExpr": "http://weso.es/shapes/キーワード",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#問いの種類",
+              "valueExpr": "http://weso.es/shapes/問いの種類",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#授業場面",
+              "valueExpr": "http://weso.es/shapes/授業場面",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#指導要領の評価観点",
+              "valueExpr": "http://weso.es/shapes/指導要領の評価観点",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#地理情報_都道府県",
+              "valueExpr": "http://weso.es/shapes/地理情報_都道府県",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#地理情報_その他地名",
+              "valueExpr": "http://weso.es/shapes/地理情報_その他地名",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://purl.org/dc/terms/date",
+              "valueExpr": "http://weso.es/shapes/Time",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#発問",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#文化名",
+              "valueExpr": "http://weso.es/shapes/文化名",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#育みたいコンピテンシー",
+              "valueExpr": "http://weso.es/shapes/育みたいコンピテンシー",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#地理情報_外国",
+              "valueExpr": "http://weso.es/shapes/地理情報_外国",
+              "min": 0,
+              "max": -1
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "https://w3id.org/sukilam-educational-metadata/term/property#学習の目的",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              },
+              "min": 0,
+              "max": -1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/時代",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/時代"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/キーワード",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/キーワード"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/地理情報_その他地名",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/地理情報_その他地名"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/地理情報_外国",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/地理情報_外国"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/地理情報_都道府県",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/地理情報_都道府県"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": "http://weso.es/shapes/Place",
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/学年",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/学年"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/指導要領の評価観点",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/指導要領の評価観点"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/授業場面",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/授業場面"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/教科",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/教科"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/文化名",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/文化名"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": "http://weso.es/shapes/Keyword",
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/育みたいコンピテンシー",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/育みたいコンピテンシー"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/視点",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/視点"
+                ]
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "nodeKind": "iri"
+              },
+              "min": 0,
+              "max": 1
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http://weso.es/shapes/問いの種類",
+      "type": "ShapeDecl",
+      "shapeExpr": {
+        "type": "Shape",
+        "expression": {
+          "type": "EachOf",
+          "expressions": [
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/2000/01/rdf-schema#label",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "datatype": "http://www.w3.org/2001/XMLSchema#string"
+              }
+            },
+            {
+              "type": "TripleConstraint",
+              "predicate": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+              "valueExpr": {
+                "type": "NodeConstraint",
+                "values": [
+                  "https://jpsearch.go.jp/term/type/問いの種類"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "@context": "http://www.w3.org/ns/shex.jsonld"
+}

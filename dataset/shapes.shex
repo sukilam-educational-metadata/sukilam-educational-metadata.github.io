@@ -1,0 +1,492 @@
+PREFIX : <http://weso.es/shapes/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xml: <http://www.w3.org/XML/1998/namespace/>
+PREFIX data: <https://w3id.org/sukilam-educational-metadata/data/>
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX ex: <https://w3id.org/sukilam-educational-metadata/>
+PREFIX exp: <https://w3id.org/sukilam-educational-metadata/term/property#>
+PREFIX ns1: <https://jpsearch.go.jp/term/property#>
+PREFIX ns2: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <http://schema.org/>
+PREFIX type: <https://jpsearch.go.jp/term/type/>
+
+:Class
+{
+   rdf:type  [rdfs:Class]  ;                                   # 100.0 %
+   rdfs:label  rdf:langString  +;                              # 100.0 %
+            # 87.5 % obj: rdf:langString. Cardinality: {1}
+            # 12.5 % obj: rdf:langString. Cardinality: {2}
+   rdfs:comment  rdf:langString  +                             # 100.0 %
+            # 87.5 % obj: rdf:langString. Cardinality: {1}
+            # 12.5 % obj: rdf:langString. Cardinality: {2}
+}
+
+
+:教材メタデータ
+{
+   rdf:type  [data:教材メタデータ]  ;                                 # 100.0 %
+   exp:元資料メタデータ  @:元資料メタデータ  ;                                 # 100.0 %
+   exp:教育メタデータ  @:教育メタデータ                                      # 100.0 %
+}
+
+
+:Property
+{
+   rdf:type  [rdfs:Property]  ;                                # 100.0 %
+   rdfs:comment  rdf:langString  +;                            # 100.0 %
+            # 95.45454545454545 % obj: rdf:langString. Cardinality: {1}
+   rdfs:label  rdf:langString  +;                              # 100.0 %
+            # 95.45454545454545 % obj: rdf:langString. Cardinality: {1}
+   rdfs:domain  IRI  ;                                         # 100.0 %
+            # 81.81818181818183 % obj: @:Class. Cardinality: {1}
+   rdfs:range  @:Class  *
+            # 63.63636363636363 % obj: @:Class. Cardinality: +
+            # 59.09090909090909 % obj: @:Class. Cardinality: {1}
+}
+
+
+:Agent
+{
+   rdf:type  [type:Agent]  ;                                   # 100.0 %
+   owl:sameAs  IRI  +;                                         # 100.0 %
+            # 29.523809523809526 % obj: IRI. Cardinality: {5}
+            # 20.0 % obj: IRI. Cardinality: {4}
+            # 16.19047619047619 % obj: IRI. Cardinality: {6}
+            # 12.380952380952381 % obj: IRI. Cardinality: {7}
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:isDefinedBy  IRI  ;                                    # 100.0 %
+   schema:name  xsd:string  +;                                 # 100.0 %
+            # 67.61904761904762 % obj: xsd:string. Cardinality: {3}
+            # 15.238095238095239 % obj: xsd:string. Cardinality: {4}
+   schema:description  xsd:string  ?;
+            # 89.52380952380953 % obj: xsd:string. Cardinality: {1}
+   rdf:type  [type:Person]  ?;
+            # 84.76190476190476 % obj: type:Person. Cardinality: {1}
+   schema:deathDate  IRI  ?;
+            # 82.85714285714286 % obj: IRI. Cardinality: {1}
+            # 18.095238095238095 % obj: @:Time. Cardinality: {1}
+   schema:birthDate  IRI  ?;
+            # 80.0 % obj: IRI. Cardinality: {1}
+            # 19.047619047619047 % obj: @:Time. Cardinality: {1}
+   schema:image  IRI  ?;
+            # 78.0952380952381 % obj: IRI. Cardinality: {1}
+   schema:subjectOf  IRI  ?;
+            # 65.71428571428571 % obj: IRI. Cardinality: {1}
+   rdfs:seeAlso  IRI  *;
+            # 59.04761904761905 % obj: IRI. Cardinality: +
+            # 40.95238095238095 % obj: IRI. Cardinality: {1}
+            # 12.380952380952381 % obj: IRI. Cardinality: {2}
+   schema:url  IRI  *;
+            # 35.23809523809524 % obj: IRI. Cardinality: +
+            # 32.38095238095238 % obj: IRI. Cardinality: {1}
+   schema:memberOf  IRI  *
+            # 15.238095238095239 % obj: IRI. Cardinality: +
+}
+
+
+:Person
+{
+   rdf:type  [type:Agent]  ;                                   # 100.0 %
+   rdf:type  [type:Person]  ;                                  # 100.0 %
+   owl:sameAs  IRI  +;                                         # 100.0 %
+            # 32.58426966292135 % obj: IRI. Cardinality: {5}
+            # 19.101123595505616 % obj: IRI. Cardinality: {6}
+            # 17.97752808988764 % obj: IRI. Cardinality: {4}
+            # 14.606741573033707 % obj: IRI. Cardinality: {7}
+            # 10.112359550561797 % obj: IRI. Cardinality: {8}
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:isDefinedBy  IRI  ;                                    # 100.0 %
+   schema:name  xsd:string  +;                                 # 100.0 %
+            # 71.91011235955057 % obj: xsd:string. Cardinality: {3}
+            # 15.730337078651685 % obj: xsd:string. Cardinality: {4}
+   schema:description  xsd:string  ;                           # 100.0 %
+   schema:deathDate  IRI  ?;
+            # 97.75280898876404 % obj: IRI. Cardinality: {1}
+            # 21.34831460674157 % obj: @:Time. Cardinality: {1}
+   schema:birthDate  IRI  ?;
+            # 94.3820224719101 % obj: IRI. Cardinality: {1}
+            # 22.47191011235955 % obj: @:Time. Cardinality: {1}
+   schema:image  IRI  ?;
+            # 91.01123595505618 % obj: IRI. Cardinality: {1}
+   schema:subjectOf  IRI  ?;
+            # 77.52808988764045 % obj: IRI. Cardinality: {1}
+   rdfs:seeAlso  IRI  *;
+            # 62.92134831460674 % obj: IRI. Cardinality: +
+            # 44.9438202247191 % obj: IRI. Cardinality: {1}
+            # 14.606741573033707 % obj: IRI. Cardinality: {2}
+   schema:url  IRI  *;
+            # 40.44943820224719 % obj: IRI. Cardinality: +
+            # 37.07865168539326 % obj: IRI. Cardinality: {1}
+   schema:memberOf  IRI  *
+            # 17.97752808988764 % obj: IRI. Cardinality: +
+}
+
+
+:Keyword
+{
+   rdf:type  [type:Keyword]  ;                                 # 100.0 %
+   rdfs:label  xsd:string  *;
+            # 97.46621621621621 % obj: xsd:string. Cardinality: +
+            # 90.03378378378379 % obj: xsd:string. Cardinality: {1}
+   rdfs:seeAlso  IRI  *;
+            # 54.22297297297297 % obj: IRI. Cardinality: +
+            # 34.96621621621622 % obj: IRI. Cardinality: {3}
+            # 10.97972972972973 % obj: IRI. Cardinality: {1}
+   schema:name  xsd:string  *
+            # 38.00675675675676 % obj: xsd:string. Cardinality: +
+            # 35.641891891891895 % obj: xsd:string. Cardinality: {1}
+}
+
+
+:Country
+{
+   rdf:type  [type:Place]  ;                                   # 100.0 %
+   rdf:type  [type:Country]  ;                                 # 100.0 %
+   rdfs:seeAlso  IRI  {4};                                     # 100.0 %
+            # 15.789473684210526 % obj: @:Agent. Cardinality: {1}
+   schema:name  xsd:string  +;                                 # 100.0 %
+            # 73.68421052631578 % obj: xsd:string. Cardinality: {2}
+            # 21.052631578947366 % obj: xsd:string. Cardinality: {3}
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   schema:geoCoveredBy  IRI  ;                                 # 100.0 %
+   schema:geo  IRI  ;                                          # 100.0 %
+   rdfs:isDefinedBy  IRI  ;                                    # 100.0 %
+   schema:isPartOf  IRI  ?
+            # 57.89473684210527 % obj: IRI. Cardinality: {1}
+            # 26.31578947368421 % obj: @:Place. Cardinality: {1}
+}
+
+
+:Place
+{
+   rdf:type  [type:Place]  ;                                   # 100.0 %
+   schema:name  xsd:string  +;                                 # 100.0 %
+            # 73.01587301587301 % obj: xsd:string. Cardinality: {3}
+            # 22.22222222222222 % obj: xsd:string. Cardinality: {2}
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:seeAlso  IRI  *;
+            # 98.4126984126984 % obj: IRI. Cardinality: +
+            # 96.82539682539682 % obj: IRI. Cardinality: {4}
+   schema:geoCoveredBy  IRI  ?;
+            # 98.4126984126984 % obj: IRI. Cardinality: {1}
+   schema:geo  IRI  ?;
+            # 98.4126984126984 % obj: IRI. Cardinality: {1}
+   rdfs:isDefinedBy  IRI  ?;
+            # 98.4126984126984 % obj: IRI. Cardinality: {1}
+   schema:isPartOf  IRI  ?;
+            # 84.12698412698413 % obj: IRI. Cardinality: {1}
+            # 74.60317460317461 % obj: @:Place. Cardinality: {1}
+            # 66.66666666666666 % obj: @:Country. Cardinality: {1}
+   schema:url  IRI  ?;
+            # 66.66666666666666 % obj: IRI. Cardinality: {1}
+   rdf:type  [type:Country]  ?
+            # 30.158730158730158 % obj: type:Country. Cardinality: {1}
+}
+
+
+:Time
+{
+   rdf:type  [type:Time]  ;                                    # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:CalendarEra
+{
+   rdf:type  [type:Time]  ;                                    # 100.0 %
+   rdf:type  [type:CalendarEra]  ;                             # 100.0 %
+   owl:sameAs  IRI  +;                                         # 100.0 %
+            # 60.0 % obj: IRI. Cardinality: {3}
+            # 40.0 % obj: IRI. Cardinality: {4}
+   schema:name  xsd:string  +;                                 # 100.0 %
+            # 60.0 % obj: xsd:string. Cardinality: {2}
+            # 40.0 % obj: xsd:string. Cardinality: {3}
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdf:type  [type:HistoricalEra]  ?;
+            # 80.0 % obj: type:HistoricalEra. Cardinality: {1}
+   ns2:closeMatch  IRI  ?;
+            # 80.0 % obj: IRI. Cardinality: {1}
+   rdfs:isDefinedBy  IRI  ?;
+            # 60.0 % obj: IRI. Cardinality: {1}
+   ns1:start  xsd:string  ?;
+            # 40.0 % obj: xsd:string. Cardinality: {1}
+   ns1:startEntity  IRI  ?;
+            # 40.0 % obj: IRI. Cardinality: {1}
+            # 20.0 % obj: @:Time. Cardinality: {1}
+   schema:startDate  xsd:string  ?;
+            # 40.0 % obj: xsd:string. Cardinality: {1}
+   schema:endDate  xsd:string  ?;
+            # 20.0 % obj: xsd:string. Cardinality: {1}
+   ns1:endEntity  IRI  ?;
+            # 20.0 % obj: IRI. Cardinality: {1}
+   ns1:end  xsd:string  ?
+            # 20.0 % obj: xsd:string. Cardinality: {1}
+}
+
+
+:HistoricalEra
+{
+   rdf:type  [type:Time]  ;                                    # 100.0 %
+   rdf:type  [type:CalendarEra]  ;                             # 100.0 %
+   rdf:type  [type:HistoricalEra]  ;                           # 100.0 %
+   owl:sameAs  IRI  +;                                         # 100.0 %
+            # 75.0 % obj: IRI. Cardinality: {3}
+            # 25.0 % obj: IRI. Cardinality: {4}
+   schema:name  xsd:string  +;                                 # 100.0 %
+            # 75.0 % obj: xsd:string. Cardinality: {2}
+            # 25.0 % obj: xsd:string. Cardinality: {3}
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:isDefinedBy  IRI  ?;
+            # 75.0 % obj: IRI. Cardinality: {1}
+   ns2:closeMatch  IRI  ?;
+            # 75.0 % obj: IRI. Cardinality: {1}
+   ns1:start  xsd:string  ?;
+            # 25.0 % obj: xsd:string. Cardinality: {1}
+   ns1:startEntity  IRI  ?;
+            # 25.0 % obj: IRI. Cardinality: {1}
+   schema:startDate  xsd:string  ?
+            # 25.0 % obj: xsd:string. Cardinality: {1}
+}
+
+
+:名所絵
+{
+   rdf:type  [type:Keyword]  ;                                 # 100.0 %
+   rdf:type  [<http://ja.dbpedia.org/resource/名所絵>]  ;          # 100.0 %
+   rdf:type  [<http://www.wikidata.org/entity/Q3304751>]  ;          # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:Q3304751
+{
+   rdf:type  [type:Keyword]  ;                                 # 100.0 %
+   rdf:type  [<http://ja.dbpedia.org/resource/名所絵>]  ;          # 100.0 %
+   rdf:type  [<http://www.wikidata.org/entity/Q3304751>]  ;          # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:元資料
+{
+   rdf:type  [ex:元資料]  ;                                       # 100.0 %
+   exp:資料番号  xsd:string  ;                                     # 100.0 %
+   schema:url  IRI  ;                                          # 100.0 %
+   exp:元の資料の出典  xsd:string  +;                                 # 100.0 %
+            # 99.73958333333334 % obj: xsd:string. Cardinality: {1}
+   rdfs:label  xsd:string  *;
+            # 99.47916666666666 % obj: xsd:string. Cardinality: +
+            # 99.21875 % obj: xsd:string. Cardinality: {1}
+   schema:image  IRI  ?;
+            # 99.47916666666666 % obj: IRI. Cardinality: {1}
+   schema:license  IRI  ?
+            # 90.88541666666666 % obj: IRI. Cardinality: {1}
+}
+
+
+:元資料メタデータ
+{
+   rdf:type  [data:元資料メタデータ]  ;                                # 100.0 %
+   exp:元資料  @:元資料  *
+            # 98.46153846153847 % obj: @:元資料. Cardinality: +
+            # 24.615384615384617 % obj: @:元資料. Cardinality: {1}
+            # 12.307692307692308 % obj: @:元資料. Cardinality: {3}
+            # 10.76923076923077 % obj: @:元資料. Cardinality: {2}
+}
+
+
+:教育メタデータ
+{
+   exp:指導要領コード  IRI  +;                                        # 100.0 %
+            # 12.307692307692308 % obj: IRI. Cardinality: {7}
+   rdf:type  [data:教育メタデータ]  ;                                 # 100.0 %
+   schema:geo  IRI  +;                                         # 100.0 %
+            # 21.53846153846154 % obj: IRI. Cardinality: {1}
+            # 12.307692307692308 % obj: IRI. Cardinality: {3}
+            # 12.307692307692308 % obj: IRI. Cardinality: {6}
+            # 10.76923076923077 % obj: IRI. Cardinality: {2}
+   exp:学年  @:学年  +;                                            # 100.0 %
+            # 21.53846153846154 % obj: @:学年. Cardinality: {5}
+            # 16.923076923076923 % obj: @:学年. Cardinality: {1}
+            # 10.76923076923077 % obj: @:学年. Cardinality: {6}
+            # 10.76923076923077 % obj: @:学年. Cardinality: {4}
+            # 10.76923076923077 % obj: @:学年. Cardinality: {3}
+   exp:教科  @:教科  +;                                            # 100.0 %
+            # 18.461538461538463 % obj: @:教科. Cardinality: {8}
+            # 15.384615384615385 % obj: @:教科. Cardinality: {3}
+            # 12.307692307692308 % obj: @:教科. Cardinality: {6}
+            # 12.307692307692308 % obj: @:教科. Cardinality: {4}
+            # 10.76923076923077 % obj: @:教科. Cardinality: {5}
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   exp:学習指導案  IRI  ;                                           # 100.0 %
+   exp:時代  @:時代  *;
+            # 96.92307692307692 % obj: @:時代. Cardinality: +
+            # 23.076923076923077 % obj: @:時代. Cardinality: {2}
+            # 15.384615384615385 % obj: @:時代. Cardinality: {1}
+            # 15.384615384615385 % obj: @:時代. Cardinality: {3}
+            # 13.846153846153847 % obj: @:時代. Cardinality: {4}
+            # 12.307692307692308 % obj: @:時代. Cardinality: {6}
+   exp:視点  @:視点  *;
+            # 96.92307692307692 % obj: @:視点. Cardinality: +
+            # 10.76923076923077 % obj: @:視点. Cardinality: {6}
+   exp:キーワード  @:キーワード  *;
+            # 95.38461538461539 % obj: @:キーワード. Cardinality: +
+            # 10.76923076923077 % obj: @:キーワード. Cardinality: {6}
+            # 10.76923076923077 % obj: @:キーワード. Cardinality: {13}
+   exp:問いの種類  @:問いの種類  *;
+            # 80.0 % obj: @:問いの種類. Cardinality: +
+            # 35.38461538461539 % obj: @:問いの種類. Cardinality: {1}
+            # 29.230769230769234 % obj: @:問いの種類. Cardinality: {2}
+            # 15.384615384615385 % obj: @:問いの種類. Cardinality: {3}
+   exp:授業場面  @:授業場面  *;
+            # 80.0 % obj: @:授業場面. Cardinality: +
+            # 33.84615384615385 % obj: @:授業場面. Cardinality: {1}
+            # 26.153846153846157 % obj: @:授業場面. Cardinality: {3}
+            # 20.0 % obj: @:授業場面. Cardinality: {2}
+   exp:指導要領の評価観点  @:指導要領の評価観点  *;
+            # 78.46153846153847 % obj: @:指導要領の評価観点. Cardinality: +
+            # 41.53846153846154 % obj: @:指導要領の評価観点. Cardinality: {2}
+            # 30.76923076923077 % obj: @:指導要領の評価観点. Cardinality: {1}
+   exp:地理情報_都道府県  @:地理情報_都道府県  *;
+            # 73.84615384615385 % obj: @:地理情報_都道府県. Cardinality: +
+            # 36.92307692307693 % obj: @:地理情報_都道府県. Cardinality: {1}
+            # 13.846153846153847 % obj: @:地理情報_都道府県. Cardinality: {2}
+   exp:地理情報_その他地名  @:地理情報_その他地名  *;
+            # 69.23076923076923 % obj: @:地理情報_その他地名. Cardinality: +
+            # 24.615384615384617 % obj: @:地理情報_その他地名. Cardinality: {1}
+   dc:date  @:Time  *;
+            # 67.6923076923077 % obj: @:Time. Cardinality: +
+            # 16.923076923076923 % obj: @:Time. Cardinality: {2}
+            # 12.307692307692308 % obj: @:Time. Cardinality: {1}
+            # 10.76923076923077 % obj: @:Time. Cardinality: {3}
+   exp:発問  xsd:string  *;
+            # 64.61538461538461 % obj: xsd:string. Cardinality: +
+            # 12.307692307692308 % obj: xsd:string. Cardinality: {3}
+   exp:文化名  @:文化名  *;
+            # 46.15384615384615 % obj: @:文化名. Cardinality: +
+            # 30.76923076923077 % obj: @:文化名. Cardinality: {1}
+   exp:育みたいコンピテンシー  @:育みたいコンピテンシー  *;
+            # 40.0 % obj: @:育みたいコンピテンシー. Cardinality: +
+            # 15.384615384615385 % obj: @:育みたいコンピテンシー. Cardinality: {3}
+            # 10.76923076923077 % obj: @:育みたいコンピテンシー. Cardinality: {2}
+   exp:地理情報_外国  @:地理情報_外国  *;
+            # 26.153846153846157 % obj: @:地理情報_外国. Cardinality: +
+   exp:学習の目的  xsd:string  *
+            # 20.0 % obj: xsd:string. Cardinality: +
+}
+
+
+:時代
+{
+   rdf:type  [type:時代]  ;                                      # 100.0 %
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:seeAlso  IRI  ?
+            # 10.416666666666668 % obj: IRI. Cardinality: {1}
+            # 10.416666666666668 % obj: @:Time. Cardinality: {1}
+            # 10.416666666666668 % obj: @:CalendarEra. Cardinality: {1}
+}
+
+
+:キーワード
+{
+   rdf:type  [type:キーワード]  ;                                   # 100.0 %
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:seeAlso  IRI  ?
+            # 62.60869565217392 % obj: IRI. Cardinality: {1}
+            # 48.81987577639752 % obj: @:Keyword. Cardinality: {1}
+            # 13.043478260869565 % obj: @:Agent. Cardinality: {1}
+            # 11.055900621118013 % obj: @:Person. Cardinality: {1}
+}
+
+
+:地理情報_その他地名
+{
+   rdf:type  [type:地理情報_その他地名]  ;                              # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:地理情報_外国
+{
+   rdf:type  [type:地理情報_外国]  ;                                 # 100.0 %
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:seeAlso  IRI  ?
+            # 44.680851063829785 % obj: IRI. Cardinality: {1}
+            # 44.680851063829785 % obj: @:Place. Cardinality: {1}
+            # 40.42553191489361 % obj: @:Country. Cardinality: {1}
+}
+
+
+:地理情報_都道府県
+{
+   rdf:type  [type:地理情報_都道府県]  ;                               # 100.0 %
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:seeAlso  @:Place  ?
+            # 93.33333333333333 % obj: @:Place. Cardinality: {1}
+}
+
+
+:学年
+{
+   rdf:type  [type:学年]  ;                                      # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:指導要領の評価観点
+{
+   rdf:type  [type:指導要領の評価観点]  ;                               # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:授業場面
+{
+   rdf:type  [type:授業場面]  ;                                    # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:教科
+{
+   rdf:type  [type:教科]  ;                                      # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:文化名
+{
+   rdf:type  [type:文化名]  ;                                     # 100.0 %
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:seeAlso  @:Keyword  ?
+            # 15.789473684210526 % obj: @:Keyword. Cardinality: {1}
+}
+
+
+:育みたいコンピテンシー
+{
+   rdf:type  [type:育みたいコンピテンシー]  ;                             # 100.0 %
+   rdfs:label  xsd:string                                      # 100.0 %
+}
+
+
+:視点
+{
+   rdf:type  [type:視点]  ;                                      # 100.0 %
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdfs:seeAlso  IRI  ?
+            # 83.33333333333334 % obj: IRI. Cardinality: {1}
+            # 82.95454545454545 % obj: @:Keyword. Cardinality: {1}
+}
+
+
+:問いの種類
+{
+   rdfs:label  xsd:string  ;                                   # 100.0 %
+   rdf:type  [type:問いの種類]                                      # 100.0 %
+}
+
+
