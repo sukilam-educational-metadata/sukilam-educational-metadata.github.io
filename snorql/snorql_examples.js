@@ -169,6 +169,21 @@ LIMIT 100`,
   }`,
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
 	},
+	{
+		"mlabel": ["Europeanaの資料を使った教育メタデータ", "test"],
+		"query" : 
+`select distinct ?e ?label ?src ?src_label ?url ?image where {
+	?top semp:元資料メタデータ/semp:元資料 ?src . 
+	?src a  <https://w3id.org/sukilam-educational-metadata/元資料>;
+		  rdfs:label ?src_label;
+		  # schema:image ?image;
+		  schema:url ?url . 
+		  filter (regex(str(?url), "europeana"))  . 
+  	optional { ?src schema:image ?image . } 
+	?top semp:教育メタデータ ?e . ?e rdfs:label ?label . 
+  }`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
 	/*
 	{
 		"mlabel": ["filterPersuade", "filterPersuade"],
