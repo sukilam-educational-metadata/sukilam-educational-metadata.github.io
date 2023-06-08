@@ -184,6 +184,14 @@ LIMIT 100`,
   }`,
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
 	},
+	{
+		"mlabel": ["教育メタデータの数", "test"],
+		"query" : 
+`select (count(?s) as ?c) where {
+	?s a <https://w3id.org/sukilam-educational-metadata/data/教育メタデータ>
+}`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
 	/*
 	{
 		"mlabel": ["filterPersuade", "filterPersuade"],
