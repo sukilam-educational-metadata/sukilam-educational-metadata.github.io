@@ -1,4 +1,4 @@
-# S×UKILAM（スキラム）教育メタデータLOD
+# S×UKILAM（スキラム）教育メタデータLOD 2.0
 
 <br/>
 
