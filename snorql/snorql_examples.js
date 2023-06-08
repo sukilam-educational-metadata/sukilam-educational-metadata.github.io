@@ -185,10 +185,18 @@ LIMIT 100`,
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
 	},
 	{
-		"mlabel": ["教育メタデータの数", "test"],
+		"mlabel": ["教育メタデータ（教材）の数", "test"],
 		"query" : 
 `select (count(?s) as ?c) where {
 	?s a <https://w3id.org/sukilam-educational-metadata/data/教育メタデータ>
+}`,
+		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
+	},
+	{
+		"mlabel": ["プロパティの一覧", "test"],
+		"query" : 
+`select distinct ?p ?label where {
+?s ?p ?o . ?p rdfs:label ?label . 
 }`,
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
 	},
