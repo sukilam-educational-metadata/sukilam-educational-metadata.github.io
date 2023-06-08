@@ -6,15 +6,11 @@
 
 [S×UKILAM：Primary Source Sets／スキラム連携：多様な資料を活用した教材アーカイブ](https://adeac.jp/adeac-lab/top/SxUKILAM/index.html)のLODを公開します。
 
-<!-- This is the main repository for Education Metadata
-
-- https://w3id.org/sukilam-educational-metadata/ -->
-
 <br/>
 
 ## お知らせ
 
-### 2023-03-31 <!-- ：サイト公開 -->
+### 2023-03-31
 
 サイトを公開しました。
 
@@ -23,8 +19,6 @@
 ## SPARQLエンドポイント（Snorql）
 
 - [https://sukilam-educational-metadata.github.io/snorql/](https://sukilam-educational-metadata.github.io/snorql/)
-
-<!-- ## 連絡先 -->
 
 <br/>
 
