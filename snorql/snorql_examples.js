@@ -196,7 +196,8 @@ LIMIT 100`,
 		"mlabel": ["プロパティの一覧", "test"],
 		"query" : 
 `select distinct ?p ?label where {
-?s ?p ?o . ?p rdfs:label ?label . 
+  ?s ?p ?o . 
+  ?p rdfs:label ?label . 
 }`,
 		"ns" : [ ]	// list of ns prefixes defined in example_ns, if necessary 必要に応じてexample_nsで定義した接頭辞リスト
 	},
